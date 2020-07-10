@@ -11,12 +11,26 @@ document.addEventListener('keydown', 'keyPush');
 setInterval(game, 1000/15);
 }
 
+px=py=10;
+gs=tc=20;
+ax=ay=15;
 xv=yv=0;
-function game {
-}
-
-function keyPush(evt){
-
-}
+trail=[];
+tail = 5;
+function game() {
+    px+=xv;
+    py+=yv;
+    if(px<0) {
+        px= tc-1;
+    }
+    if(px>tc-1) {
+        px= 0;
+    }
+    if(py<0) {
+        py= tc-1;
+    }
+    if(py>tc-1) {
+        py= 0;
+    }
 
  </script>
